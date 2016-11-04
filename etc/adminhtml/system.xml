@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="gespreidbetalen" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Qonnex Gespreid Betalen</label>
+
+                <field id="order_status" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>New Order Status</label>
+                    <source_model>Qonnex\GespreidBetalen\Model\Config\Source\Order\Status\Pending</source_model>
+                    <!--<source_model>Magento\Sales\Model\Config\Source\Order\Status\NewStatus</source_model>-->
+                </field>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="dealer_idnummer" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Dealer ID</label>
+                </field>
+                <field id="finan_formulier_code" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Finan formulier code</label>
+                    <comment>Finan formuliercode gekregen van Qonnex</comment>
+                </field>
+                <field id="success_text" translate="label" type="textarea" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Tekst na invullen aanvraag</label>
+                    <comment>Deze tekst wordt op de success pagina getoond na het sucesevol invullen van het aanvraagformulier. Deze tekst is alleen zichtbaar op de sucesspagina na een bestelling met betaalmethode</comment>
+                </field>
+                <field id="min_order_total" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Minimum Order Total</label>
+                    <comment>minumum bestelbedrag waarbij deze betaalmethode beschikbaar is. Standaard: 500</comment>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

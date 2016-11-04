@@ -1,0 +1,15 @@
+{
+    "name": "converzy/qonnex-gespreidbetalen-magento2",
+    "description": "Gespreid Betalen integration for Magento 2",
+    "type": "magento2-module",
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+        "Qonnex\\GespreidBetalen\\": ""
+      }
+
+    },
+    "license": [
+        "OSL-3.0"
+    ]
+}

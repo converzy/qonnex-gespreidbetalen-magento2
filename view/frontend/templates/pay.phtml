@@ -1,0 +1,10 @@
+<?php $aPayData = $block->getPayData(); ?>
+<script type='text/javascript'>
+   var mo_inl_dlr    = '<?php echo ($aPayData['mo_inl_dlr'])?>';
+   var mo_inl_plc    = '<?php echo ($aPayData['mo_inl_plc'])?>';
+   var mo_inl_csu    = '<?php echo ($aPayData['mo_inl_csu'])?>';
+   var mo_inl_width  = '1200';
+   var mo_inl_height = '500';
+   var mo_inl_amt    = '<?php echo ($aPayData['mo_inl_amt'])?>';
+</script>
+<script src='https://app.qonnex.nl/inlinking.js'></script>
